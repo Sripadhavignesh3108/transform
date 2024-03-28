@@ -43,10 +43,14 @@
     .s:hover ~ .box{
         transform:  skew(45deg);
     }
+        .z:hover ~ .box{
+         transform:  perspective(200px) rotateX(180deg);
+    }
+    
     label{
         color: aliceblue;
         font-size: 30px;
-        padding:25px;
+        padding:12px;
         font-weight: 600;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
@@ -60,6 +64,8 @@
         <label class="rt">Rotate</label>
 
         <label class="s">Skew</label>
+        
+        <label class="z">Z-axis</label>
 
         <div class="box"></div>
     </div>
