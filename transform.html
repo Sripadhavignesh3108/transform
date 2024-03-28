@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:black;
+    }
+    .main{
+        border:0.5px solid rgb(216, 215, 215);
+        border-radius: 2%;
+        height: 550px;
+        width:550px;
+        margin-top: 60px;
+        margin-left: 350px;
+        background-color: black;
+      
+     
+    }
+    .box{
+        border: 0.5px solid;
+        border-radius: 10%;
+        background-color: aqua;
+        box-shadow: 0 0 50px 1px aqua;
+        height: 150px;
+        width: 150px;
+        margin: 190px;
+        transition: ease 0.5s;
+    }
+    .tr:hover ~ .box{
+        transform: perspective(200px) translate(190px,150px);
+    }
+
+    .sc:hover ~ .box{
+        transform: scale(2.0,2.0);
+    }
+    .rt:hover ~ .box{
+        transform:rotate(180deg);
+    }
+    .s:hover ~ .box{
+        transform:  skew(45deg);
+    }
+    label{
+        color: aliceblue;
+        font-size: 30px;
+        padding:25px;
+        font-weight: 600;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+</style>
+<body>
+    <div class="main">
+        <label class="tr">Translate</label>
+
+        <label class="sc">Scale</label>
+
+        <label class="rt">Rotate</label>
+
+        <label class="s">Skew</label>
+
+        <div class="box"></div>
+    </div>
+</body>
+</html>
